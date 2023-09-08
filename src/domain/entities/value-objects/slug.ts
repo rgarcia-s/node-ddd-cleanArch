@@ -1,17 +1,15 @@
-import { text } from "stream/consumers";
-
 export class Slug {
-  public value: string;
+  public value: string
 
   constructor(value: string) {
-    this.value = value;
+    this.value = value
   }
 
   /**
    * Receives a string and normalizes it as a slug.
-   * 
+   *
    * Example: "An Example title" becomes "an-example-title"
-   * 
+   *
    * @param text {string}
    */
   static createFromText(text: string) {
@@ -23,8 +21,8 @@ export class Slug {
       .replace(/_/g, '-')
       .replace(/[^\w-]+/g, '')
       .replace(/--+/g, '-')
-      .replace(/-$/g, '');
+      .replace(/-$/g, '')
 
-    return new Slug(slugText);
+    return new Slug(slugText)
   }
 }
