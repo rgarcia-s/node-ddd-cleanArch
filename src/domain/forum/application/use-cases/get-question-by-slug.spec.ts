@@ -15,7 +15,7 @@ describe('Get Question By Slug', () => {
 
   it('should be able to get a question by its slug', async () => {
     const newQuestion = Question.create({
-      authorId: new UniqueEntityId('1'),
+      authorId: new UniqueEntityId(),
       content: 'question content',
       title: 'Example question',
       slug: Slug.create('example-question'),
